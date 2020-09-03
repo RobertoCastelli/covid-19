@@ -1,6 +1,7 @@
 body {
   margin: 0;
   color: #333333;
+  letter-spacing: 0.07rem;
   font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,4 +14,64 @@ code {
 
 * {
   box-sizing: border-box;
+}
+
+header,
+footer {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 1rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 768px;
+  margin: auto;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.header-image {
+  width: 50%;
+}
+
+.data-last-update {
+  font-size: 0.8rem;
+}
+
+.confirmed-wrapper,
+.deaths-wrapper,
+.recovered-wrapper {
+  padding: 1rem;
+}
+
+.confirmed-wrapper {
+  border-bottom: 0.5rem solid orange;
+}
+.deaths-wrapper {
+  border-bottom: 0.5rem solid brown;
+}
+.recovered-wrapper {
+  border-bottom: 0.5rem solid green;
 }

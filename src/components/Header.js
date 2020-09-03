@@ -4,10 +4,10 @@ import titleImage from "../images/bg.jpg";
 
 const Header = () => {
   return (
-    <div>
-      <img src={titleImage} alt="bg-img"></img>
+    <header>
+      <img className="header-image" src={titleImage} alt="bg-img"></img>
       <GetDate />
-    </div>
+    </header>
   );
 };
 

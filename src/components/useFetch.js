@@ -6,6 +6,7 @@ const useFetch = (url) => {
   const [recovered, setRecovered] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,10 +14,11 @@ const useFetch = (url) => {
       try {
         const res = await fetch(url);
         const data = await res.json();
-        console.log(data); // <-<< Delete this
         setConfirmed(data.confirmed.value);
         setDeaths(data.deaths.value);
         setRecovered(data.recovered.value);
+        setLastUpdate(data.lastUpdate);
+        console.log(data); // <-<< Delete this
       } catch (error) {
         setError(`error message: ${error}`);
       } finally {
@@ -26,7 +28,14 @@ const useFetch = (url) => {
     fetchData();
   }, [url]);
 
-  return { confirmed, deaths, recovered, isLoading, error };
+  return {
+    confirmed,
+    deaths,
+    recovered,
+    isLoading,
+    lastUpdate,
+    error,
+  };
 };
 
 export default useFetch;
