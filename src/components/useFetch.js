@@ -14,11 +14,11 @@ const useFetch = (url) => {
       try {
         const res = await fetch(url);
         const data = await res.json();
+        // console.log(data); // <-<< Delete this
         setConfirmed(data.confirmed.value);
         setDeaths(data.deaths.value);
         setRecovered(data.recovered.value);
         setLastUpdate(data.lastUpdate);
-        console.log(data); // <-<< Delete this
       } catch (error) {
         setError(`error message: ${error}`);
       } finally {

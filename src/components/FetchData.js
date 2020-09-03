@@ -8,16 +8,8 @@ import { RiVirusFill } from "react-icons/ri";
 
 const FetchData = () => {
   //--> MIT License 2020, mathdroid
-  const url = `https://covid19.mathdro.id/api`;
-
-  const {
-    confirmed,
-    deaths,
-    recovered,
-    isLoading,
-    lastUpdate,
-    error,
-  } = useFetch(url);
+  const url = `https://covid19.mathdro.id/api/`;
+  const { confirmed, deaths, recovered, isLoading, error } = useFetch(url);
 
   return (
     <div>
