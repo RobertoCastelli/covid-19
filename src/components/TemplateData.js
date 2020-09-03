@@ -5,8 +5,7 @@ const TemplateData = (props) => {
     <div>
       <div>{props.icon}</div>
       <h4>{props.title}</h4>
-      <div className="data-type">{props.type}</div>
-      <div className="data-last-update">{props.lastUpdate}</div>
+      <div>{props.type}</div>
       <div>{props.isLoading}</div>
       <div>{props.error}</div>
     </div>

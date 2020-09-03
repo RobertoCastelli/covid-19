@@ -38,7 +38,6 @@ const FetchData = () => {
                 </div>
               )
             }
-            lastUpdate={new Date(lastUpdate).toDateString()}
             isLoading={isLoading && <p>is loading...</p>}
             error={error && <p>Something went wrong...</p>}
           />
@@ -59,7 +58,6 @@ const FetchData = () => {
                 </div>
               )
             }
-            lastUpdate={new Date(lastUpdate).toDateString()}
             isLoading={isLoading && <p>is loading...</p>}
             error={error && <p>Something went wrong...</p>}
           />
@@ -80,7 +78,6 @@ const FetchData = () => {
                 </div>
               )
             }
-            lastUpdate={new Date(lastUpdate).toDateString()}
             isLoading={isLoading && <p>is loading...</p>}
             error={error && <p>Something went wrong...</p>}
           />

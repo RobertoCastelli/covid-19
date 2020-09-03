@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FetchData from "./components/FetchData";
-import CountriesList from "./components/CountriesList";
+import TemplateCountries from "./components/TemplateCountries";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <div className="content">
         <Header />
         <FetchData />
-        <CountriesList />
+        <TemplateCountries />
       </div>
       <Footer />
     </div>
